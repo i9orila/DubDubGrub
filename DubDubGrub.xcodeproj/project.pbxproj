@@ -7,18 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26218317A7ECCC8F0BA7E87F /* Pods_DubDubGrub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B3615F599C58A931A21FF /* Pods_DubDubGrub.framework */; };
+		ED4D23E829AA1FCD00C50585 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D23E729AA1FCD00C50585 /* CustomModifiers.swift */; };
+		ED4D23F429AA808400C50585 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED4D23F329AA808400C50585 /* GoogleService-Info.plist */; };
+		ED4D241129AB574F00C50585 /* LoginView11.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241029AB574F00C50585 /* LoginView11.swift */; };
+		ED4D241729ABA21500C50585 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241629ABA21500C50585 /* AuthenticationViewModel.swift */; };
+		ED4D241929ABA31F00C50585 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241829ABA31F00C50585 /* AuthenticationView.swift */; };
+		ED4D241B29ABA38400C50585 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241A29ABA38400C50585 /* SignupView.swift */; };
+		ED4D241D29ABA54700C50585 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241C29ABA54700C50585 /* AuthenticatedView.swift */; };
+		ED4D241F29ABA8EF00C50585 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241E29ABA8EF00C50585 /* UserProfileView.swift */; };
+		ED4D242129ABADAB00C50585 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242029ABADAB00C50585 /* LoginView.swift */; };
+		ED4D242329ABCF9300C50585 /* DDGLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242229ABCF9300C50585 /* DDGLocationViewModel.swift */; };
+		ED4D242529ABD3AF00C50585 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242429ABD3AF00C50585 /* DDGLocation.swift */; };
+		ED4D242729ABD84C00C50585 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242629ABD84C00C50585 /* SwiftUIView.swift */; };
+		ED4D242929ACABA300C50585 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242829ACABA300C50585 /* DDGProfile.swift */; };
+		ED4D242C29ACDE7200C50585 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242B29ACDE7200C50585 /* MockData.swift */; };
+		ED4D242E29ACFE5A00C50585 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242D29ACFE5A00C50585 /* ImagePicker.swift */; };
 		EDB5974629A8CD6900E3784A /* DubDubGrubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5974529A8CD6900E3784A /* DubDubGrubApp.swift */; };
-		EDB5974829A8CD6900E3784A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5974729A8CD6900E3784A /* ContentView.swift */; };
 		EDB5974A29A8CD6A00E3784A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB5974929A8CD6A00E3784A /* Assets.xcassets */; };
 		EDB5974D29A8CD6A00E3784A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDB5974C29A8CD6A00E3784A /* Preview Assets.xcassets */; };
+		EDB5975429A8D23600E3784A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5975329A8D23600E3784A /* Color+Ext.swift */; };
+		EDB5975629A8D2B300E3784A /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5975529A8D2B300E3784A /* AppTabView.swift */; };
+		EDB5975829A8D30F00E3784A /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5975729A8D30F00E3784A /* LocationMapView.swift */; };
+		EDB5975A29A8D34500E3784A /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5975929A8D34500E3784A /* LocationListView.swift */; };
+		EDB5975C29A8D38300E3784A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5975B29A8D38300E3784A /* ProfileView.swift */; };
+		EDB5975E29A8E9BB00E3784A /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5975D29A8E9BB00E3784A /* LocationDetailView.swift */; };
+		EDB5976029A968DF00E3784A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5975F29A968DF00E3784A /* LocationCell.swift */; };
+		EDB5976229A96E1000E3784A /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5976129A96E1000E3784A /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2790E448B97F43211C89EC0C /* Pods-DubDubGrub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubDubGrub.release.xcconfig"; path = "Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub.release.xcconfig"; sourceTree = "<group>"; };
+		9F5B3615F599C58A931A21FF /* Pods_DubDubGrub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DubDubGrub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4D23E729AA1FCD00C50585 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		ED4D23F329AA808400C50585 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED4D241029AB574F00C50585 /* LoginView11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView11.swift; sourceTree = "<group>"; };
+		ED4D241629ABA21500C50585 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		ED4D241829ABA31F00C50585 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		ED4D241A29ABA38400C50585 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		ED4D241C29ABA54700C50585 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
+		ED4D241E29ABA8EF00C50585 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		ED4D242029ABADAB00C50585 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ED4D242229ABCF9300C50585 /* DDGLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocationViewModel.swift; sourceTree = "<group>"; };
+		ED4D242429ABD3AF00C50585 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
+		ED4D242629ABD84C00C50585 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		ED4D242829ACABA300C50585 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
+		ED4D242B29ACDE7200C50585 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		ED4D242D29ACFE5A00C50585 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		EDB5974229A8CD6900E3784A /* DubDubGrub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubDubGrub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB5974529A8CD6900E3784A /* DubDubGrubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubDubGrubApp.swift; sourceTree = "<group>"; };
-		EDB5974729A8CD6900E3784A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EDB5974929A8CD6A00E3784A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDB5974C29A8CD6A00E3784A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDB5975329A8D23600E3784A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		EDB5975529A8D2B300E3784A /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		EDB5975729A8D30F00E3784A /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
+		EDB5975929A8D34500E3784A /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		EDB5975B29A8D38300E3784A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EDB5975D29A8E9BB00E3784A /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		EDB5975F29A968DF00E3784A /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		EDB5976129A96E1000E3784A /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		F0BCBB6FCBE4EE1AE81606CC /* Pods-DubDubGrub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubDubGrub.debug.xcconfig"; path = "Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +74,109 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26218317A7ECCC8F0BA7E87F /* Pods_DubDubGrub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADB7193E018DD172180CB17E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0BCBB6FCBE4EE1AE81606CC /* Pods-DubDubGrub.debug.xcconfig */,
+				2790E448B97F43211C89EC0C /* Pods-DubDubGrub.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C09D066BC9FAE79931D38094 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B3615F599C58A931A21FF /* Pods_DubDubGrub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED4D23EE29AA2B5E00C50585 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EDB5975329A8D23600E3784A /* Color+Ext.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		ED4D23EF29AA2BF600C50585 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED4D23F229AA2CE600C50585 /* CustomViews */,
+				ED4D23F129AA2C7D00C50585 /* Cells */,
+				ED4D23F029AA2C1400C50585 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED4D23F029AA2C1400C50585 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				ED4D241529ABA1C900C50585 /* Auth */,
+				EDB5975529A8D2B300E3784A /* AppTabView.swift */,
+				EDB5975729A8D30F00E3784A /* LocationMapView.swift */,
+				EDB5975929A8D34500E3784A /* LocationListView.swift */,
+				ED4D242629ABD84C00C50585 /* SwiftUIView.swift */,
+				EDB5975D29A8E9BB00E3784A /* LocationDetailView.swift */,
+				EDB5975B29A8D38300E3784A /* ProfileView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ED4D23F129AA2C7D00C50585 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EDB5975F29A968DF00E3784A /* LocationCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ED4D23F229AA2CE600C50585 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				ED4D23E729AA1FCD00C50585 /* CustomModifiers.swift */,
+				EDB5976129A96E1000E3784A /* AvatarView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		ED4D241529ABA1C900C50585 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				ED4D241029AB574F00C50585 /* LoginView11.swift */,
+				ED4D241629ABA21500C50585 /* AuthenticationViewModel.swift */,
+				ED4D241829ABA31F00C50585 /* AuthenticationView.swift */,
+				ED4D241A29ABA38400C50585 /* SignupView.swift */,
+				ED4D242029ABADAB00C50585 /* LoginView.swift */,
+				ED4D241C29ABA54700C50585 /* AuthenticatedView.swift */,
+				ED4D241E29ABA8EF00C50585 /* UserProfileView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		ED4D242A29ACDE5700C50585 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED4D242B29ACDE7200C50585 /* MockData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EDB5973929A8CD6900E3784A = {
 			isa = PBXGroup;
 			children = (
 				EDB5974429A8CD6900E3784A /* DubDubGrub */,
 				EDB5974329A8CD6900E3784A /* Products */,
+				ADB7193E018DD172180CB17E /* Pods */,
+				C09D066BC9FAE79931D38094 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +191,17 @@
 		EDB5974429A8CD6900E3784A /* DubDubGrub */ = {
 			isa = PBXGroup;
 			children = (
+				ED4D242A29ACDE5700C50585 /* Model */,
 				EDB5974529A8CD6900E3784A /* DubDubGrubApp.swift */,
-				EDB5974729A8CD6900E3784A /* ContentView.swift */,
-				EDB5974929A8CD6A00E3784A /* Assets.xcassets */,
+				ED4D23EE29AA2B5E00C50585 /* Extensions */,
+				ED4D23EF29AA2BF600C50585 /* Views */,
 				EDB5974B29A8CD6A00E3784A /* Preview Content */,
+				EDB5974929A8CD6A00E3784A /* Assets.xcassets */,
+				ED4D23F329AA808400C50585 /* GoogleService-Info.plist */,
+				ED4D242229ABCF9300C50585 /* DDGLocationViewModel.swift */,
+				ED4D242429ABD3AF00C50585 /* DDGLocation.swift */,
+				ED4D242829ACABA300C50585 /* DDGProfile.swift */,
+				ED4D242D29ACFE5A00C50585 /* ImagePicker.swift */,
 			);
 			path = DubDubGrub;
 			sourceTree = "<group>";
@@ -74,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDB5975029A8CD6A00E3784A /* Build configuration list for PBXNativeTarget "DubDubGrub" */;
 			buildPhases = (
+				1B4DA9179EA0980236008E8D /* [CP] Check Pods Manifest.lock */,
 				EDB5973E29A8CD6900E3784A /* Sources */,
 				EDB5973F29A8CD6900E3784A /* Frameworks */,
 				EDB5974029A8CD6900E3784A /* Resources */,
+				D29FB03F008EDA60907739AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +276,82 @@
 			files = (
 				EDB5974D29A8CD6A00E3784A /* Preview Assets.xcassets in Resources */,
 				EDB5974A29A8CD6A00E3784A /* Assets.xcassets in Resources */,
+				ED4D23F429AA808400C50585 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B4DA9179EA0980236008E8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DubDubGrub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D29FB03F008EDA60907739AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDB5973E29A8CD6900E3784A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB5974829A8CD6900E3784A /* ContentView.swift in Sources */,
+				ED4D241B29ABA38400C50585 /* SignupView.swift in Sources */,
+				ED4D241729ABA21500C50585 /* AuthenticationViewModel.swift in Sources */,
 				EDB5974629A8CD6900E3784A /* DubDubGrubApp.swift in Sources */,
+				ED4D23E829AA1FCD00C50585 /* CustomModifiers.swift in Sources */,
+				EDB5975829A8D30F00E3784A /* LocationMapView.swift in Sources */,
+				ED4D241929ABA31F00C50585 /* AuthenticationView.swift in Sources */,
+				EDB5975A29A8D34500E3784A /* LocationListView.swift in Sources */,
+				ED4D242329ABCF9300C50585 /* DDGLocationViewModel.swift in Sources */,
+				EDB5975E29A8E9BB00E3784A /* LocationDetailView.swift in Sources */,
+				ED4D242C29ACDE7200C50585 /* MockData.swift in Sources */,
+				EDB5975629A8D2B300E3784A /* AppTabView.swift in Sources */,
+				EDB5975C29A8D38300E3784A /* ProfileView.swift in Sources */,
+				ED4D242129ABADAB00C50585 /* LoginView.swift in Sources */,
+				ED4D242E29ACFE5A00C50585 /* ImagePicker.swift in Sources */,
+				ED4D242929ACABA300C50585 /* DDGProfile.swift in Sources */,
+				ED4D242529ABD3AF00C50585 /* DDGLocation.swift in Sources */,
+				ED4D241D29ABA54700C50585 /* AuthenticatedView.swift in Sources */,
+				ED4D242729ABD84C00C50585 /* SwiftUIView.swift in Sources */,
+				ED4D241F29ABA8EF00C50585 /* UserProfileView.swift in Sources */,
+				EDB5976029A968DF00E3784A /* LocationCell.swift in Sources */,
+				ED4D241129AB574F00C50585 /* LoginView11.swift in Sources */,
+				EDB5976229A96E1000E3784A /* AvatarView.swift in Sources */,
+				EDB5975429A8D23600E3784A /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +474,7 @@
 		};
 		EDB5975129A8CD6A00E3784A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0BCBB6FCBE4EE1AE81606CC /* Pods-DubDubGrub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -273,8 +487,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,6 +505,7 @@
 		};
 		EDB5975229A8CD6A00E3784A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2790E448B97F43211C89EC0C /* Pods-DubDubGrub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,8 +518,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
