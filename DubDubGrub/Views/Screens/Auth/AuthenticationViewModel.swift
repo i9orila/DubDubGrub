@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//import FirebaseAuth
+import FirebaseAuth
 
 // For Sign in with Apple
 import AuthenticationServices
@@ -113,7 +113,7 @@ extension AuthenticationViewModel {
     }
     catch {
       print(error)
-      errorMessage = error.localizedDescription
+ errorMessage = error.localizedDescription
       authenticationState = .unauthenticated
       return false
     }
@@ -146,9 +146,42 @@ extension AuthenticationViewModel {
 extension AuthenticationViewModel {
 
   func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
+      request.requestedScopes = [.fullName, .email]
+      let nonce = randomNonceString()
+      currentNonce = nonce
+      request.nonce = sha256(nonce)
   }
 
   func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) {
+      if case .failure(let failure) = result {
+          errorMessage = failure.localizedDescription
+      }
+      else if case .success(let success) = result {
+          if let appleIDCredential = success.credential as? ASAuthorizationAppleIDCredential {
+              guard let nonce = currentNonce else {
+                  fatalError("Invalid state: a login callback was received, but no login request was sent.")
+              }
+              guard let appleIDToken = appleIDCredential.identityToken else {
+                  print("Unable to fetch identity token")
+                  return
+              }
+              guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                  print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+                  return
+              }
+              let credential = OAuthProvider.credential(withProviderID: "apple.com",
+                                                        idToken: idTokenString,
+                                                        rawNonce: nonce)
+              Task {
+                  do {
+                      _ = try await Auth.auth().signIn(with: credential)
+                  }
+                  catch {
+                      print("Error authenticating: \(error.localizedDescription)")
+                  }
+              }
+          }
+      }
   }
 
   func updateDisplayName(for user: User, with appleIDCredential: ASAuthorizationAppleIDCredential, force: Bool = false) async {

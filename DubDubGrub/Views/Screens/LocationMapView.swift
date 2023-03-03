@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct LocationMapView: View {
-    
+    @State private var isShowingOnboardView = true
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 47.237339,
                                                                                   longitude: 39.712246),
                                                    span: MKCoordinateSpan(latitudeDelta: 0.05,
@@ -20,10 +20,17 @@ struct LocationMapView: View {
             Map(coordinateRegion: $region).ignoresSafeArea()
             
             VStack {
-                LogoView().shadow(radius: 10)
+                LogoView(frameWidth: 125)
+                    .shadow(radius: 10)
                 
                 Spacer()
             }
+        }
+        .fullScreenCover(isPresented: $isShowingOnboardView) {
+            OnboardView(isShowingOnboardView: $isShowingOnboardView)
+        }
+        .sheet(isPresented: $isShowingOnboardView) {
+            OnboardView(isShowingOnboardView: $isShowingOnboardView)
         }
     }
 }
@@ -36,12 +43,4 @@ struct LocationMapView_Previews: PreviewProvider {
 }
 
 
-struct LogoView: View {
-    var body: some View {
-        Image("ddg-map-logo")
-            .resizable()
-            .scaledToFit()
-            .frame(height: 70)
-        
-    }
-}
+

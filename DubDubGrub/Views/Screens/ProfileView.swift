@@ -13,8 +13,9 @@ struct ProfileView: View {
     @State private var lastName     = ""
     @State private var companyName  = ""
     @State private var bio          = ""
-    @State private var image = UIImage()
+    @State  var image: UIImage?
     @State private var showSheet = false
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
@@ -25,21 +26,37 @@ struct ProfileView: View {
                 HStack(spacing: 20) {
                     ZStack {
                         Button {
-                            showSheet = true
+                            showSheet.toggle()
                             
                         } label: {
+                           
+                                if let image = self.image {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame( width: 110 ,height: 110)
+                                        .clipShape(Circle())
+                                    
+                                    
+                                } else {
+                                    AvatarView(size: 110)
+                                    EditImage()
+                                }
+                                
+                                
                             
-                            AvatarView(size: 85)
-                            EditImage()
                             
                         }
-                    }
+                        
+                        }
                     
                     
-                    .padding(.leading, 12)
+                    
+                   .padding(.leading, 8)
+                   
                     .sheet(isPresented: $showSheet) {
                         // Pick an image from the photo library:
-                        ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
+                        ImagePicker(sourceType: .photoLibrary, selectedImage: $image)
                         
                         //  If you wish to take a photo from camera instead:
                         //ImagePicker(sourceType: .camera, selectedImage: self.$image)
@@ -96,7 +113,7 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ProfileView()
+            ProfileView(image: UIImage(named: "default-avatar"))
                 .preferredColorScheme(.dark)
         }
     }

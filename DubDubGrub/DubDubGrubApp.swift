@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//import Firebase
+import Firebase
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -19,40 +19,41 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 
-//@main
-//struct DubDubGrubApp: App {
-//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-//    var body: some Scene {
-//        WindowGroup {
-//            AppTabView()
-//        }
-//    }
-//}
-
 @main
-struct FavouritesApp: App {
-  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-   // @StateObject var viewModel = DDGLocationViewModel()
-  var body: some Scene {
-    WindowGroup {
-      NavigationView {
-        AuthenticatedView {
-          Image("ddg-map-logo")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 150 , height: 150)
-            
-  
-
-          Text("Welcome to Favourites!")
-            .font(.title)
-          Text("You need to be logged in to use this app.")
-        } content: {
+struct DubDubGrubApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var viewModel = DDGLocationViewModel()
+    var body: some Scene {
+        WindowGroup {
             AppTabView()
-          Spacer()
         }
-      }
     }
-  }
 }
 
+//@main
+//struct FavouritesApp: App {
+//  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+//   // @StateObject var viewModel = DDGLocationViewModel()
+//  var body: some Scene {
+//    WindowGroup {
+//      NavigationView {
+//        AuthenticatedView {
+//          Image("ddg-map-logo")
+//            .resizable()
+//            .scaledToFit()
+//            .frame(width: 150 , height: 150)
+//
+//
+//
+//          Text("Welcome to Favourites!")
+//            .font(.title)
+//          Text("You need to be logged in to use this app.")
+//        } content: {
+//            AppTabView()
+//          Spacer()
+//        }
+//      }
+//    }
+//  }
+//}
+//
