@@ -19,41 +19,46 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 
+//@main
+//struct DubDubGrubApp: App {
+//    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+//    @StateObject var viewModel = DDGLocationViewModel()
+//    var body: some Scene {
+//        WindowGroup {
+//            AppTabView()
+//        }
+//    }
+//}
+
 @main
-struct DubDubGrubApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject var viewModel = DDGLocationViewModel()
-    var body: some Scene {
-        WindowGroup {
+struct DubDubGrubApp: App  {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject  var auth =  AuthenticationViewModel()
+   // let locationManager = LocationManager()
+    var locationManager = DDGLocationViewModel()
+  var body: some Scene {
+ 
+    WindowGroup {
+      NavigationView {
+        AuthenticatedView {
+          Image("ddg-map-logo")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 150 , height: 150)
+
+
+
+          Text("Welcome to Favourites!")
+            .font(.title)
+          Text("You need to be logged in to use this app.")
+        } content: {
             AppTabView()
+                .environmentObject(auth)
+                .environmentObject(locationManager)
+          Spacer()
         }
+      }
     }
+  }
 }
 
-//@main
-//struct FavouritesApp: App {
-//  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-//   // @StateObject var viewModel = DDGLocationViewModel()
-//  var body: some Scene {
-//    WindowGroup {
-//      NavigationView {
-//        AuthenticatedView {
-//          Image("ddg-map-logo")
-//            .resizable()
-//            .scaledToFit()
-//            .frame(width: 150 , height: 150)
-//
-//
-//
-//          Text("Welcome to Favourites!")
-//            .font(.title)
-//          Text("You need to be logged in to use this app.")
-//        } content: {
-//            AppTabView()
-//          Spacer()
-//        }
-//      }
-//    }
-//  }
-//}
-//

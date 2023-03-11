@@ -100,8 +100,8 @@ struct LocationDetailView: View {
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LocationDetailView(dlocation: DDGLocation(adress: "sda", bannerAsset: "sf", description: "dsad", location: "sdf", name: "fds", phoneNumber: "sdfs", websiteURL: "fds", squareAsset: "fs"))
-                .preferredColorScheme(.light)
+         //   LocationDetailView(Moc)
+            //    .preferredColorScheme(.light)
         }
     }
 }

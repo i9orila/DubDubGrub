@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import CoreLocation
 
 struct DDGLocation: Identifiable {
     
@@ -24,7 +25,7 @@ struct DDGLocation: Identifiable {
     var adress: String
     var bannerAsset: String
     var description: String
-    var location: String
+    var location: CLLocation
     var name: String
     var phoneNumber: String
     var websiteURL: String

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import CoreLocation
 
  class DDGLocationViewModel: ObservableObject {
     @Published var dlocations = [DDGLocation]()
@@ -61,7 +62,7 @@ import Firebase
                 let adress = data[DDGLocation.kAdress] as? String ?? ""
                 let bannerAsset = data[DDGLocation.kBannerAsset] as? String ?? ""
                 let description = data[DDGLocation.kDescription] as? String ?? ""
-                let location = data[DDGLocation.kLocation] as? String ?? ""
+                let location = data[DDGLocation.kLocation] as? CLLocation ?? CLLocation(latitude: 0, longitude: 0)
                 let name = data[DDGLocation.kName] as? String ?? ""
                 let phoneNumber = data[DDGLocation.kPhoneNumber] as? String ?? ""
                 let websiteURL = data[DDGLocation.kWebsiteURL] as? String ?? ""

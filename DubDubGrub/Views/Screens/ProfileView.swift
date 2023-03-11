@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
+    @EnvironmentObject var viewModel: AuthenticationViewModel
+    @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
+    @State var presentingConfirmationDialog = false
     @State private var firstName    = ""
     @State private var lastName     = ""
     @State private var companyName  = ""
     @State private var bio          = ""
     @State  var image: UIImage?
     @State private var showSheet = false
-    @Environment(\.colorScheme) var colorScheme
+    
+    private func deleteAccount() {
+      Task {
+        if await viewModel.deleteAccount() == true {
+          dismiss()
+        }
+      }
+    }
+
+    private func signOut() {
+      viewModel.signOut()
+    }
     
     var body: some View {
         
@@ -70,13 +84,27 @@ struct ProfileView: View {
                             .font(.title2)
                             .fontWeight(.semibold)
                         TextField("Company Name", text: $companyName)
+                        
+                            
                     }
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
                     .padding(.trailing, 16)
                 }
+                
             }
             
+            HStack {
+                Text("You're logged in as \(viewModel.displayName).")
+                    .foregroundColor(.secondary)
+                    .font(.caption2)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.75)
+                    //.padding(.leading)
+                
+                Spacer()
+            }
+            .padding(.top, 5)
             
             HStack {
                 CharactersRemaininView(currentCount: bio.count)
@@ -112,10 +140,11 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+       Group {
+            ProfileView(image: UIImage(named: "default-avatar"))
             ProfileView(image: UIImage(named: "default-avatar"))
                 .preferredColorScheme(.dark)
-        }
+        }.environmentObject(AuthenticationViewModel())
     }
 }
 

@@ -101,14 +101,14 @@ struct LoginView: View {
       }
       
       // start here
-        SignInWithAppleButton { request in
-            viewModel.handleSignInWithAppleRequest(request)
-        } onCompletion: { result in
-            viewModel.handleSignInWithAppleCompletion(result)
-        }
-        .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
-        .frame(maxWidth: .infinity, maxHeight: 44)
-        .cornerRadius(8)
+//        SignInWithAppleButton { request in
+//            viewModel.handleSignInWithAppleRequest(request)
+//        } onCompletion: { result in
+//            viewModel.handleSignInWithAppleCompletion(result)
+//        }
+//        .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
+//        .frame(maxWidth: .infinity, maxHeight: 44)
+//        .cornerRadius(8)
 
       HStack {
         Text("Don't have an account yet?")
