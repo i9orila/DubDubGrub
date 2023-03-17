@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct LocationListView: View {
-    @StateObject var viewModel =  DDGLocationViewModel()
+    @EnvironmentObject private var locationManager: LocationManager
+    @StateObject var viewModel =  LocationMapViewModel()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.dlocations, id: \.id) { dlocation in
-                    NavigationLink(destination: LocationDetailView(dlocation: dlocation)) {
-                        LocationCell(dlocation: dlocation)
+                ForEach(locationManager.places) { place in
+                    NavigationLink(destination: LocationDetailView(location: place)) {
+                        LocationCell(location: place)
                         
                     }
                     
@@ -23,9 +24,7 @@ struct LocationListView: View {
             }
             //.listStyle(.plain)
             .navigationTitle("Grub Spots")
-            .onAppear() {
-                self.viewModel.fetchData()
-            }
+            
         }
         
     }

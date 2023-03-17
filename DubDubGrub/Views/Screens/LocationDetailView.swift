@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocationDetailView: View {
-    var dlocation: DDGLocation
+    var location: DDGPlaces
     
     let columns = [GridItem(.flexible()),
                    GridItem(.flexible()),
@@ -22,12 +22,12 @@ struct LocationDetailView: View {
                     
                 
                 HStack {
-                    AdressView(adress: dlocation.adress)
+                    AdressView(adress: location.adress)
                     Spacer()
                     }
                 .padding(.horizontal)
                 
-                DescriptionView(text: dlocation.description)
+                DescriptionView(text: location.description)
                 
                 ZStack {
                     Capsule()
@@ -40,7 +40,7 @@ struct LocationDetailView: View {
                             LocationActionButton(imageName: "location.fill", color: .brandPrimary)
                         }
                     
-                        Link(destination: URL(string: dlocation.websiteURL)!, label: {
+                        Link(destination: URL(string: location.websiteURL)!, label: {
                             LocationActionButton(imageName: "network", color: .brandPrimary)
                         })
                         
@@ -81,7 +81,7 @@ struct LocationDetailView: View {
                 Spacer()
             }
             .ignoresSafeArea()
-            .navigationTitle(dlocation.name)
+            .navigationTitle(location.name)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {

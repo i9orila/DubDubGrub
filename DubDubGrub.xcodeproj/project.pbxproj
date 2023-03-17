@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26218317A7ECCC8F0BA7E87F /* Pods_DubDubGrub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B3615F599C58A931A21FF /* Pods_DubDubGrub.framework */; };
 		ED3D502E29BD22B200DA2D46 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D502D29BD22B200DA2D46 /* AlertItem.swift */; };
 		ED3D503129BD290D00DA2D46 /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D503029BD290D00DA2D46 /* LocationMapViewModel.swift */; };
 		ED3D503429BD2D3E00DA2D46 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3D503329BD2D3E00DA2D46 /* LocationManager.swift */; };
+		ED4247B429BE598600B678BF /* Pods_DubDubGrub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B3615F599C58A931A21FF /* Pods_DubDubGrub.framework */; };
+		ED4247B529BE598600B678BF /* Pods_DubDubGrub.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B3615F599C58A931A21FF /* Pods_DubDubGrub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED4247B829BE5E0900B678BF /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4247B729BE5E0900B678BF /* StorageManager.swift */; };
 		ED4D23E829AA1FCD00C50585 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D23E729AA1FCD00C50585 /* CustomModifiers.swift */; };
 		ED4D23F429AA808400C50585 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED4D23F329AA808400C50585 /* GoogleService-Info.plist */; };
 		ED4D241129AB574F00C50585 /* LoginView11.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241029AB574F00C50585 /* LoginView11.swift */; };
@@ -20,11 +22,8 @@
 		ED4D241D29ABA54700C50585 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241C29ABA54700C50585 /* AuthenticatedView.swift */; };
 		ED4D241F29ABA8EF00C50585 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D241E29ABA8EF00C50585 /* UserProfileView.swift */; };
 		ED4D242129ABADAB00C50585 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242029ABADAB00C50585 /* LoginView.swift */; };
-		ED4D242329ABCF9300C50585 /* DDGLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242229ABCF9300C50585 /* DDGLocationViewModel.swift */; };
-		ED4D242529ABD3AF00C50585 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242429ABD3AF00C50585 /* DDGLocation.swift */; };
-		ED4D242729ABD84C00C50585 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242629ABD84C00C50585 /* SwiftUIView.swift */; };
+		ED4D242529ABD3AF00C50585 /* DDGPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242429ABD3AF00C50585 /* DDGPlaces.swift */; };
 		ED4D242929ACABA300C50585 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242829ACABA300C50585 /* DDGProfile.swift */; };
-		ED4D242C29ACDE7200C50585 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242B29ACDE7200C50585 /* MockData.swift */; };
 		ED4D242E29ACFE5A00C50585 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4D242D29ACFE5A00C50585 /* ImagePicker.swift */; };
 		ED88369729B202DC006B288E /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88369629B202DC006B288E /* OnboardView.swift */; };
 		ED88369929B2033B006B288E /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88369829B2033B006B288E /* LogoView.swift */; };
@@ -42,12 +41,27 @@
 		EDB5976229A96E1000E3784A /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5976129A96E1000E3784A /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ED4247B629BE598600B678BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED4247B529BE598600B678BF /* Pods_DubDubGrub.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2790E448B97F43211C89EC0C /* Pods-DubDubGrub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubDubGrub.release.xcconfig"; path = "Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub.release.xcconfig"; sourceTree = "<group>"; };
 		9F5B3615F599C58A931A21FF /* Pods_DubDubGrub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DubDubGrub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED3D502D29BD22B200DA2D46 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		ED3D503029BD290D00DA2D46 /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		ED3D503329BD2D3E00DA2D46 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		ED4247B729BE5E0900B678BF /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		ED4D23E729AA1FCD00C50585 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		ED4D23F329AA808400C50585 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED4D241029AB574F00C50585 /* LoginView11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView11.swift; sourceTree = "<group>"; };
@@ -57,11 +71,8 @@
 		ED4D241C29ABA54700C50585 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
 		ED4D241E29ABA8EF00C50585 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		ED4D242029ABADAB00C50585 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		ED4D242229ABCF9300C50585 /* DDGLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocationViewModel.swift; sourceTree = "<group>"; };
-		ED4D242429ABD3AF00C50585 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
-		ED4D242629ABD84C00C50585 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		ED4D242429ABD3AF00C50585 /* DDGPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGPlaces.swift; sourceTree = "<group>"; };
 		ED4D242829ACABA300C50585 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
-		ED4D242B29ACDE7200C50585 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		ED4D242D29ACFE5A00C50585 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		ED88369629B202DC006B288E /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		ED88369829B2033B006B288E /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
@@ -87,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26218317A7ECCC8F0BA7E87F /* Pods_DubDubGrub.framework in Frameworks */,
+				ED4247B429BE598600B678BF /* Pods_DubDubGrub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				ED3D503329BD2D3E00DA2D46 /* LocationManager.swift */,
+				ED4247B729BE5E0900B678BF /* StorageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -164,7 +176,6 @@
 				ED4D241529ABA1C900C50585 /* Auth */,
 				EDB5975529A8D2B300E3784A /* AppTabView.swift */,
 				EDB5975929A8D34500E3784A /* LocationListView.swift */,
-				ED4D242629ABD84C00C50585 /* SwiftUIView.swift */,
 				EDB5975D29A8E9BB00E3784A /* LocationDetailView.swift */,
 				EDB5975B29A8D38300E3784A /* ProfileView.swift */,
 			);
@@ -207,7 +218,6 @@
 		ED4D242A29ACDE5700C50585 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ED4D242B29ACDE7200C50585 /* MockData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,8 +250,7 @@
 				ED4D23EF29AA2BF600C50585 /* Views */,
 				EDB5974B29A8CD6A00E3784A /* Preview Content */,
 				EDB5974929A8CD6A00E3784A /* Assets.xcassets */,
-				ED4D242229ABCF9300C50585 /* DDGLocationViewModel.swift */,
-				ED4D242429ABD3AF00C50585 /* DDGLocation.swift */,
+				ED4D242429ABD3AF00C50585 /* DDGPlaces.swift */,
 				ED4D242829ACABA300C50585 /* DDGProfile.swift */,
 				ED4D242D29ACFE5A00C50585 /* ImagePicker.swift */,
 				ED88369629B202DC006B288E /* OnboardView.swift */,
@@ -269,7 +278,7 @@
 				EDB5973E29A8CD6900E3784A /* Sources */,
 				EDB5973F29A8CD6900E3784A /* Frameworks */,
 				EDB5974029A8CD6900E3784A /* Resources */,
-				D29FB03F008EDA60907739AB /* [CP] Embed Pods Frameworks */,
+				ED4247B629BE598600B678BF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,23 +358,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D29FB03F008EDA60907739AB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DubDubGrub/Pods-DubDubGrub-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -376,6 +368,7 @@
 				ED3D503129BD290D00DA2D46 /* LocationMapViewModel.swift in Sources */,
 				ED4D241B29ABA38400C50585 /* SignupView.swift in Sources */,
 				ED4D241729ABA21500C50585 /* AuthenticationViewModel.swift in Sources */,
+				ED4247B829BE5E0900B678BF /* StorageManager.swift in Sources */,
 				EDB5974629A8CD6900E3784A /* DubDubGrubApp.swift in Sources */,
 				ED4D23E829AA1FCD00C50585 /* CustomModifiers.swift in Sources */,
 				ED88369729B202DC006B288E /* OnboardView.swift in Sources */,
@@ -384,17 +377,14 @@
 				ED4D241929ABA31F00C50585 /* AuthenticationView.swift in Sources */,
 				ED3D502E29BD22B200DA2D46 /* AlertItem.swift in Sources */,
 				EDB5975A29A8D34500E3784A /* LocationListView.swift in Sources */,
-				ED4D242329ABCF9300C50585 /* DDGLocationViewModel.swift in Sources */,
 				EDB5975E29A8E9BB00E3784A /* LocationDetailView.swift in Sources */,
-				ED4D242C29ACDE7200C50585 /* MockData.swift in Sources */,
 				EDB5975629A8D2B300E3784A /* AppTabView.swift in Sources */,
 				EDB5975C29A8D38300E3784A /* ProfileView.swift in Sources */,
 				ED4D242129ABADAB00C50585 /* LoginView.swift in Sources */,
 				ED4D242E29ACFE5A00C50585 /* ImagePicker.swift in Sources */,
 				ED4D242929ACABA300C50585 /* DDGProfile.swift in Sources */,
-				ED4D242529ABD3AF00C50585 /* DDGLocation.swift in Sources */,
+				ED4D242529ABD3AF00C50585 /* DDGPlaces.swift in Sources */,
 				ED4D241D29ABA54700C50585 /* AuthenticatedView.swift in Sources */,
-				ED4D242729ABD84C00C50585 /* SwiftUIView.swift in Sources */,
 				ED88369B29B20EC7006B288E /* XDismisButton.swift in Sources */,
 				ED4D241F29ABA8EF00C50585 /* UserProfileView.swift in Sources */,
 				ED88369929B2033B006B288E /* LogoView.swift in Sources */,
@@ -536,11 +526,12 @@
 				DEVELOPMENT_TEAM = S7HD7PPB8U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,11 +561,12 @@
 				DEVELOPMENT_TEAM = S7HD7PPB8U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

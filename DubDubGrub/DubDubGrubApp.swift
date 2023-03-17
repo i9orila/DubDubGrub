@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-import Firebase
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -29,13 +31,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 //        }
 //    }
 //}
-
 @main
 struct DubDubGrubApp: App  {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject  var auth =  AuthenticationViewModel()
-   // let locationManager = LocationManager()
-    var locationManager = DDGLocationViewModel()
+    let locationManager = LocationManager()
+   // @StateObject var locationManager = DDGLocationViewModel()
   var body: some Scene {
  
     WindowGroup {

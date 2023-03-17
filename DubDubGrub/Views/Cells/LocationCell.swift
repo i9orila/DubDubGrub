@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationCell: View {
    // @EnvironmentObject var viewModel: DDGLocationViewModel
-    var dlocation: DDGLocation
+    var location: DDGPlaces
     var body: some View {
         HStack(spacing: 5) {
             Image("default-square-asset")
@@ -22,7 +22,7 @@ struct LocationCell: View {
             
             
             VStack(alignment: .leading) {
-                Text(dlocation.name)
+                Text(location.name)
                     
                     .font(.title3)
                     .fontWeight(.semibold)
@@ -43,8 +43,4 @@ struct LocationCell: View {
     }
 }
 
-//struct LocationCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LocationCell(dlocation:)
-//    }
-//}
+

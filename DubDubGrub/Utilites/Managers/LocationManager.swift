@@ -6,6 +6,12 @@
 //
 
 import Foundation
+import CoreLocation
 final class LocationManager: ObservableObject {
-    @Published var locations: [DDGLocation] = []
+    @Published var places: [DDGPlaces]   = []
+    
+    @Published var newPlaces: [NewPlace] = []
+    
+   
 }
+

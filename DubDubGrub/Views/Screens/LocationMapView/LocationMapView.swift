@@ -7,18 +7,26 @@
 
 import SwiftUI
 import MapKit
-import Firebase
+import FirebaseFirestore
+
 
 struct LocationMapView: View {
-    @EnvironmentObject private var locationManager: DDGLocationViewModel
+    @EnvironmentObject private var locationManager: LocationManager
     @StateObject private var viewModel = LocationMapViewModel()
+    
+    
+    
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $viewModel.region, annotationItems: locationManager.dlocations) { dlocation in
-                MapMarker(coordinate: dlocation.location.coordinate, tint: .brandPrimary)
+//            Map(coordinateRegion: $viewModel.region, annotationItems: locationManager.places){ location in
+//                MapMarker(coordinate: location.location, tint: .brandPrimary)
+        //    }
+            Map(coordinateRegion: $viewModel.region, annotationItems: locationManager.newPlaces) { location in
+                MapMarker(coordinate: location.location, tint: .brandPrimary)
             }
-                .ignoresSafeArea()
+            .ignoresSafeArea()
+
             
             VStack {
                 LogoView(frameWidth: 125)
@@ -26,18 +34,24 @@ struct LocationMapView: View {
                 Spacer()
             }
         }
-        
+
         .alert(item: $viewModel.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
-        
-        .fullScreenCover(isPresented: $viewModel.isShowingOnboardView) {
-            OnboardView(isShowingOnboardView: $viewModel.isShowingOnboardView)
+        .onAppear() {
+            if locationManager.places.isEmpty {
+                viewModel.getLocations(for: locationManager)
+            }
         }
+
         
-        .sheet(isPresented: $viewModel.isShowingOnboardView) {
-            OnboardView(isShowingOnboardView: $viewModel.isShowingOnboardView)
-        }
+//        .fullScreenCover(isPresented: $viewModel.isShowingOnboardView) {
+//            OnboardView(isShowingOnboardView: $viewModel.isShowingOnboardView)
+//        }
+        
+//        .sheet(isPresented: $viewModel.isShowingOnboardView) {
+//            OnboardView(isShowingOnboardView: $viewModel.isShowingOnboardView)
+//        }
     }
 }
 
